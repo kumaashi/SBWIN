@@ -23,29 +23,31 @@
 
 #include "sbwin.h"
 
-void update_audio(float *buf, int count, int ch) {
+void update_audio(float *buf, int count, int ch)
+{
 	//Nothing to do.
 }
 
-void update_frame(uint32_t *buf, int w, int h) {
+void update_frame(uint32_t *buf, int w, int h)
+{
 	static int frame_count = 0;
 	auto kdata = sb::get_keydata();
-	
-	if( kdata.left ) 
+
+	if ( kdata.left )
 		printf("left\n");
-	if( kdata.right )
+	if ( kdata.right )
 		printf("right\n");
-	if( kdata.up )
+	if ( kdata.up )
 		printf("up\n");
-	if( kdata.down )
+	if ( kdata.down )
 		printf("down\n");
-	if( kdata.button0 )
+	if ( kdata.button0 )
 		printf("button0\n");
-	if( kdata.button1 )
+	if ( kdata.button1 )
 		printf("button1\n");
-	if( kdata.button2 )
+	if ( kdata.button2 )
 		printf("button2\n");
-	if( kdata.button3 )
+	if ( kdata.button3 )
 		printf("button3\n");
 	printf("kdata.raw=0x%08X\n", kdata.raw);
 

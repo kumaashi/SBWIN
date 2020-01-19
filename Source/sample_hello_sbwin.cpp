@@ -32,8 +32,8 @@ void update_frame(uint32_t *buf, int w, int h)
 {
 	static int frame_count = 0;
 	printf("frame_count=%d, w=%d, h=%d\n", frame_count, w, h);
-	for(int y = 0 ;  y < h; y++) {
-		for(int x = 0 ;  x < w; x++) {
+	for (int y = 0 ;  y < h; y++) {
+		for (int x = 0 ;  x < w; x++) {
 			buf[x + y * w] = rand();
 		}
 	}
