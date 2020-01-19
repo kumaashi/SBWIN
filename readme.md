@@ -63,6 +63,11 @@ int main(int argc, char *argv[])
 
 ```
 
+## AStyle options
+
+http://astyle.sourceforge.net/
+
+astyle --indent=tab --style=linux --indent=force-tab --indent-after-parens --indent-col1-comments --pad-header
 
 ## Author
 
