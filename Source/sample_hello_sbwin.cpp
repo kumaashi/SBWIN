@@ -23,12 +23,14 @@
 
 #include "sbwin.h"
 
-void update_audio(float *buf, int count, int ch)
+void
+update_audio(float *buf, int count, int ch)
 {
 	//nothing to do.
 }
 
-void update_frame(uint32_t *buf, int w, int h)
+void
+update_frame(uint32_t *buf, int w, int h)
 {
 	static int frame_count = 0;
 	printf("frame_count=%d, w=%d, h=%d\n", frame_count, w, h);
@@ -40,7 +42,8 @@ void update_frame(uint32_t *buf, int w, int h)
 	frame_count++;
 }
 
-int main(int argc, char *argv[])
+int
+main(int argc, char *argv[])
 {
 	sb::run_app(argv[0], 160, 120, 640, 480,
 		update_frame,
