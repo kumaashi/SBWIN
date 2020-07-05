@@ -24,16 +24,16 @@
 #include "sbwin.h"
 
 void
-update_audio(float *buf, int count, int ch)
+update_audio(sb::Audio & audio)
 {
 	//Nothing to do.
 }
 
 void
-update_frame(uint32_t *buf, int w, int h)
+update_frame(sb::Image &img, sb::Keys & keys)
 {
 	static int frame_count = 0;
-	auto kdata = sb::get_keydata();
+	auto kdata = keys;
 
 	if ( kdata.left )
 		printf("left\n");
